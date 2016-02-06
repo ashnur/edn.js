@@ -1,7 +1,8 @@
 {
   "name": "edn-js",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A reader/writer for EDN in JS",
+  "main":"dist/edn.js",
   "scripts": {
     "prepublish": "npm run build",
     "build": "browserify --node --global -t [ babelify --presets [ es2015 ] ] -e index.js -o dist/edn.js"
