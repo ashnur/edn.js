@@ -2,20 +2,34 @@
   "name": "edn-js",
   "version": "0.0.3",
   "description": "A reader/writer for EDN in JS",
-  "keywords": ["edn"],
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "browserify -t [ babelify --presets [ es2015 ] ] -e index.js -o dist/edn.js"
+  },
+  "keywords": [
+    "edn"
+  ],
   "dependencies": {
     "@jkroso/type": "1",
     "parse-mime": "*"
   },
   "devDependencies": {
-    "serve": "jkroso/serve",
+    "babel-preset-es2015": "^6.3.13",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
     "future-node": "0",
-    "hydro-html": "*",
+    "hydro": "*",
     "hydro-bdd": "*",
     "hydro-dot": "*",
-    "hydro": "*"
+    "hydro-html": "*",
+    "serve": "jkroso/serve"
   },
-  "transpile": [["*.js", "!sourcegraph/babel->js"]],
+  "transpile": [
+    [
+      "*.js",
+      "!sourcegraph/babel->js"
+    ]
+  ],
   "repository": "jkroso/edn.js",
   "author": "Jake Rosoman",
   "files": [
