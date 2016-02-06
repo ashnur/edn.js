@@ -4,7 +4,7 @@
   "description": "A reader/writer for EDN in JS",
   "scripts": {
     "prepublish": "npm run build",
-    "build": "browserify -t [ babelify --presets [ es2015 ] ] -e index.js -o dist/edn.js"
+    "build": "browserify --node -t [ babelify --presets [ es2015 ] ] -e index.js -o dist/edn.js"
   },
   "keywords": [
     "edn"
