@@ -1,6 +1,6 @@
 {
   "name": "edn-js",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A reader/writer for EDN in JS",
   "scripts": {
     "prepublish": "npm run build",
